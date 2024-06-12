@@ -1,47 +1,15 @@
 <?php
+header("Access-Control-Allow-Origin:*");  //  POLITICAS CORS  ----->>>  CUANDO SE TERMINA DE PROGRAMAR SE BORRAN POR SEGURIDAD  
 
-
-header("Access-Control-Allow-Origin:*");  //BORRAR
-
-
-class con{
-
-    function conexion(){
-
+function conexion(){
     $host = "localhost";
-    $usuario = "root";
-    $password = "";  
-    $bd = "gestor";    
-    $puerto = 3306;  
-    $conn = new mysqli($host, $usuario, $password, $bd, $puerto);   
+    $user = "root";
+    $pass = "";
+    $db = "gestorimagenes";
+    $puerto = 3306;
 
-    return $conn;
-    
+    $mysqli = new mysqli($host, $user, $pass, $db, $puerto);
+    return $mysqli;
 }
-
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ?>
