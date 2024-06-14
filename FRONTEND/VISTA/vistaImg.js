@@ -11,7 +11,7 @@ function mostrarImg(imagenes){
 
         listaimgElement.innerHTML+=`
         <div>
-            <img src="${imgSrc}" alt="${imagen.nombre}">
+            <img id='${imagen.id}' src="${imgSrc}" alt="${imagen.nombre}" onmouseover='escala(${imagen.id})' onmouseleave='restaurar(${imagen.id})'>
         <p>${imagen.nombre}</p>
 
         </div>
@@ -30,5 +30,15 @@ function mostrarImg(imagenes){
     }
 }
 
+function escala(unid){
+   document.getElementById(unid).style.transition='1s'
+    document.getElementById(unid).style.scale='110%'
+}
+
+function restaurar(unid){
+    document.getElementById(unid).style.transition='1s'
+     document.getElementById(unid).style.scale='100%'
+ }
+     
 
 

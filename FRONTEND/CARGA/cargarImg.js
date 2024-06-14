@@ -28,4 +28,31 @@ enviarImagen();
     }
 
    
+
+
+
+    document.addEventListener('DOMContentLoaded', function() {
+
+        const inputImagen = document.getElementById('file-upload');
+        const imagenPreview = document.getElementById('imagen-preview');
+    
+
+        inputImagen.addEventListener('change', function() {
+
+            if (inputImagen.files && inputImagen.files[0]) {
+
+                const reader = new FileReader();
+                
+
+                reader.onload = function(e) {
+                    imagenPreview.src = e.target.result;
+                    imagenPreview.style.display = 'block';
+                }
+                
+
+                 reader.readAsDataURL(inputImagen.files[0]);
+            }
+        });
+    });
+   
         
