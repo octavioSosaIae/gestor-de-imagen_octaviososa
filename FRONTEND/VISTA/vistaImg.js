@@ -19,7 +19,7 @@ function mostrarImg(imagenes){
     });
 }
  async function obtenerImg(){
-    let url = "https://localhost/PROYECTOS/gestor-de-imagen_octaviososa/BACKEND/CONTROLADOR/controlador.php?function=obtenerImagen";
+    let url = "https://localhost/gestor-de-imagen_octaviososa/BACKEND/CONTROLADOR/controlador.php?function=obtenerImagen";
     try {
         let consulta = await fetch(url);
         let datos = await consulta.json();

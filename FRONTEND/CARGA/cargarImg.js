@@ -12,7 +12,7 @@ enviarImagen();
     
         let formData = new FormData(formElement);
 
-        let url = "https://localhost/PROYECTOS/gestor-de-imagen_octaviososa/BACKEND/CONTROLADOR/controlador.php?function=subirImagen";
+        let url = "https://localhost/gestor-de-imagen_octaviososa/BACKEND/CONTROLADOR/controlador.php?function=subirImagen";
 
         let config = {
             method:"POST",
